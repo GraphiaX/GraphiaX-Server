@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     path('hello/', views.say_hello_view, name='hello'),
     path('react/', views.project_structure_view, name='react'),
+    path('info/', views.github_repo_info, name='info'),
 ]
