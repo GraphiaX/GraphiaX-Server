@@ -1,5 +1,13 @@
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the GitHub API key
+GITHUB_API_KEY = os.getenv("GITHUB_API_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,6 +19,8 @@ SECRET_KEY = 'django-insecure-yktd%#pr0*^!w%f(v8z-5ht+j7eh@ff2p$9n+q=_)#*%3s0bo0
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['.vercel.app']
+
 
 # Application definition
 
@@ -57,8 +67,8 @@ TEMPLATES = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    # 'http://localhost:3000',  # Replace with your React app's domain
-    'https://graphiax.azurewebsites.net',
+    'http://localhost:3000',  # Replace with your React app's domain
+    # 'https://graphiax.azurewebsites.net',
 ]
 
 WSGI_APPLICATION = 'code2graph.wsgi.application'

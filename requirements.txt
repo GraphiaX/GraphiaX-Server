@@ -6,6 +6,8 @@ django-cors-headers==4.2.0
 gunicorn==21.2.0
 idna==3.4
 packaging==23.1
+python-decouple==3.8
+python-dotenv==1.0.0
 requests==2.31.0
 sqlparse==0.4.4
 tzdata==2023.3
