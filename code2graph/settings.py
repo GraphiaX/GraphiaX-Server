@@ -67,7 +67,7 @@ TEMPLATES = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',  # Replace with your React app's domain
+    'https://graphiax.github.io',  # Replace with your React app's domain
     # 'https://graphiax.azurewebsites.net',
 ]
 
