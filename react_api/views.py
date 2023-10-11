@@ -21,6 +21,7 @@ def github_repo_info(request):
         try:
             data = json.loads(request.body)
             repo_url = data.get('repoUrl')  # Assuming the URL is sent in the 'repoUrl' field
+            print (repo_url)
             repo_url = convert_to_api_url(repo_url)
             if repo_url:
 

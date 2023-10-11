@@ -9,8 +9,7 @@ repo_content_url = ''
 
 def get_project_structure(repo_url):
     # access_token = 'your_github_token_here'
-    # access_token = os.getenv("GITHUB_API_KEY")
-    access_token = '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'
+    access_token = os.getenv("GITHUB_API_KEY")
     print(repo_url)
     api_url = f'{repo_url}'
     global repo_content_url
