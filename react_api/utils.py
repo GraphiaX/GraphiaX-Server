@@ -165,11 +165,21 @@ def extract_dependencies(file_content):
 
 def get_network_structure(file):
         data = file
+        print("this is a log")
 
-        nodes = [{"id": item["id"], "label": item["name"] + "\nPath: " + item["path"]} for item in data]
+        nodes = [
+            {
+                "id": item["id"],
+                "label": f"{item['name']}\nPath: {os.path.dirname(item['path']) + '/'}" +
+                 (f"\nHooks: {', '.join(item['hooksUsed']['hooksUsed'])}" if item['hooksUsed']['hooksUsed'] else "")
+            }
+            for item in data
+        ]
+
+        print(nodes)
         nodes.append({
             "id": "0",
-            "group": "mints",
+            "group": "mints", 
             "color": {
                 "border": "#25aaaa",
                 "background": "#25c5df"
