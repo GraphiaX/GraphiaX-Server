@@ -14,7 +14,8 @@ def get_project_structure(repo_url):
     api_url = f'{repo_url}'
     global repo_content_url
     repo_content_url = api_url
-    # api_url = f'https://api.github.com/repos/MohyiddineDilmi/air-borne/contents'
+    #api_url = f'https://api.github.com/repos/MohyiddineDilmi/air-borne/contents'
+
     api_url = f'{repo_url}'
     headers = {'Authorization': f'token {access_token}'}
     response = requests.get(api_url, headers=headers)
