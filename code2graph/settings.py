@@ -67,10 +67,10 @@ TEMPLATES = [
     },
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     # 'https://graphiax.github.io',  # Replace with your React app's domain
-#     'http://localhost:3000',
-# ] 
+CORS_ALLOWED_ORIGINS = [
+    'https://graphiax.github.io',  # Replace with your React app's domain
+    'http://localhost:3000',
+] 
 
 
 CORS_ALLOW_ALL_ORIGINS = True
