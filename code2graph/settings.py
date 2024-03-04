@@ -16,11 +16,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yktd%#pr0*^!w%f(v8z-5ht+j7eh@ff2p$9n+q=_)#*%3s0bo0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['localhost']
 # ALLOWED_HOSTS = ['.vercel.app']
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -66,10 +66,10 @@ TEMPLATES = [
     },
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     # 'https://graphiax.github.io',  # Replace with your React app's domain
-#     'http://localhost:3000',
-# ] 
+CORS_ALLOWED_ORIGINS = [
+    'https://graphiax.github.io/GraphiaX-Frontend/',  # Replace with your React app's domain
+    # 'http://localhost:3000',
+] 
 
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -130,5 +130,4 @@ STATIC_URL = '/static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
